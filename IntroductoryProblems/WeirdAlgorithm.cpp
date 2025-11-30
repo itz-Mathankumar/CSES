@@ -1,29 +1,19 @@
-#include<iostream>
-
-#define ll long long int
-
-using namespace std;
+#include <iostream>
 
 int main()
 {
-
-    ll n;
-
-    cin>>n;
-
-    cout<<n<<" ";
-
-    while(n>1)
-    {
-
-        n = n%2==0 ? n/2 : (3*n)+1 ;
-
-        cout<<n<<" ";
-
-    }
-
-    cout<<'\n';
-
-    return 0;
+    long n;
+    std::cin >> n;
     
+    while (n != 1) {
+        std::cout << n << " ";
+        if (n % 2 == 0) {
+            n = n / 2;
+        } else {
+            n = (n * 3) + 1;
+        }
+    }
+    std::cout << "1\n";
+    
+    return 0;
 }
