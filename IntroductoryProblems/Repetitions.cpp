@@ -1,43 +1,25 @@
 #include<iostream>
- 
-#define ll long long int
- 
-using namespace std;
- 
+  
 int main()
 {
+    std::string s;
+    std::cin>>s;
  
-    string s;
- 
-    cin>>s;
- 
-    ll length = s.length();
- 
-    ll repeat = 1;
- 
-    ll maxLength = 1;
- 
-    for(ll i=1;i<=length;i++)
+    long length = s.length();
+    long repeat = 1;
+    long maxLength = 1;
+    for(long i = 1; i <= length; i++)
     {
- 
-        if(s[i-1]==s[i])
+        if(s[i-1] == s[i])
         {
- 
-            repeat+=1;
- 
+            repeat += 1;
         }
         else
         {
- 
-            maxLength = max(maxLength,repeat);
- 
-            repeat=1;
- 
+            maxLength = std::max(maxLength,repeat);
+            repeat = 1;
         }
- 
     }
  
-    cout<<maxLength;
- 
- 
+    std::cout<<maxLength;
 }
