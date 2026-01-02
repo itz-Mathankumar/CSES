@@ -1,41 +1,24 @@
-#include<iostream>
- 
-#define ll long long int
- 
-using namespace std;
- 
+#include <iostream>
+
 int main()
 {
- 
-    ll n;
- 
-    cin>>n;
- 
-    ll arr[n];
- 
-    for(ll i=0;i<n;i++)
+    long n, moves = 0;
+    std::cin >> n;
+
+    long arr[n];
+    for (long i = 0; i < n; i++)
     {
- 
-        cin>>arr[i];
- 
+        std::cin >> arr[i];
     }
- 
-    ll moves = 0;
- 
-    for(ll i=1;i<n;i++)
+
+    for (long i = 1; i < n; i++)
     {
- 
-        if(arr[i-1]>arr[i])
+        if (arr[i - 1] > arr[i])
         {
- 
-            moves += arr[i-1] - arr[i];
- 
-            arr[i] = arr[i-1];
- 
+            moves += arr[i - 1] - arr[i];
+            arr[i] = arr[i - 1];
         }
- 
     }
- 
-    cout<<moves;
- 
+
+    std::cout << moves;
 }
