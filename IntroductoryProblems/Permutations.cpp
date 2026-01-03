@@ -1,29 +1,24 @@
-#include<iostream>
- 
-#define ll long long int
- 
-using namespace std;
- 
+#include <iostream>
+
 int main()
 {
- 
-    ll n;
- 
-    cin>>n;
- 
-    if(n==2 || n==3)
+    int n;
+    std::cin >> n;
+
+    if (n == 2 || n == 3)
     {
- 
-        cout<<"NO SOLUTION";
- 
+        std::cout << "NO SOLUTION";
     }
     else
     {
- 
-        for(ll i=2;i<=n;i+=2) cout<<i<<" ";
- 
-        for(ll i=1;i<=n;i+=2) cout<<i<<" ";
- 
-	}
- 
+        for (int i = 2; i <= n; i += 2)
+        {
+            std::cout << i << " ";
+        }
+
+        for (int i = 1; i <= n; i += 2)
+        {
+            std::cout << i << " ";
+        }
+    }
 }
